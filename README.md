@@ -292,7 +292,7 @@ The algorithm also assumes each contour is closed, since clipping open contours 
 
 ##### Shape structure of the output 
 
-Although the visual output of a clipping operation is well-defined, sometimes are multiple ways the output shape can be represented with contours. In general, no assumption is made about the output contour representation, in particular with respect to contour direction. However, an attempt is made to "disentangle" the output by post-processing it. Also note that for two visually identical inputs represented differently in terms of contours, the output representation may not be the same. 
+Although the visual output of a clipping operation is well-defined, sometimes there are multiple ways the output shape can be represented with contours. In general, no assumption is made about the output contour representation, in particular with respect to contour direction. However, an attempt is made to "disentangle" the output by post-processing it. Also note that for two visually identical inputs represented differently in terms of contours, the output representation may not be the same. 
 
 A particular focus was put on the property that the output has clean curve geometry. This means that the output only has as much beziers as needed. 
 
@@ -323,7 +323,7 @@ The *divide* operation can be thought of as retrieving all closed shapes that ap
 ##### Numerical considerations
 
 - Clearly, the library actually computes an accurate numerical approximation of a clipping operation, not least because the intersection of beziers has no closed-form solution. After all the purpose of this library is to have an explicit shape representation of the clipping operation result. 
-- The implementation might not be robust, but numerical issues leading to an incorrect state should be detected in which case `success()` returns false. Also, since contourklip is self-contained, it does not use a robust geometry kernel such as CGAL. However, as shown in the "advanced usage" section, some predicate functions from eg. CGAL can be used. 
+- The implementation might not be robust, but numerical issues leading to an incorrect state should be detected in which case `success()` returns false. Also, since contourklip is self-contained, it does not use a robust geometry kernel such as CGAL.
 
 ## About the algorithm
 
