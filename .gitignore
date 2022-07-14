@@ -1,0 +1,12 @@
+# CLion work directory
+.idea/
+
+# CLion build directories
+cmake-build-*/
+
+# Exclude MacOS Finder files.
+.DS_Store
+
+# Don't keep generated svgs.
+*.svg
+!in.svg
